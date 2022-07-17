@@ -12,6 +12,9 @@
           type="text"
           class="bg-gray-200 px-4 py-2 rounded-lg w-full"
           placeholder="Search"
+          @input="onChangeInput"
+          :value="props.modelValue"
+          v-bind="$attrs"
         />
         <img
           src="https://img.icons8.com/ios/50/000000/search.png"
@@ -34,6 +37,19 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
   import ICoffeeVue from '~~/assets/icons/ICoffee.vue';
+
+  const props = defineProps({
+    modelValue: {
+      type: [String, Number],
+      default: '',
+    },
+  });
+
+  const emit = defineEmits(['change']);
+
+  const onChangeInput = ($event: Event) => {
+    emit('change', ($event.target as HTMLInputElement).value);
+  };
 </script>
