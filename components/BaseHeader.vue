@@ -24,14 +24,14 @@
       </div>
     </div>
 
-    <div class="min-w-[170px] text-center">
+    <div class="min-w-[180px] text-center">
       <a
         href="https://nubank.com.br/pagar/1i60u/ICaCdwX5fj"
         target="_blank"
         variant="ghost"
         class="flex gap-2 px-4 hover:opacity-75"
       >
-        <span> Pague um café </span>
+        <span> Pague meu café </span>
         <ICoffeeVue class="text-[#6f4e37] -mt-2" />
       </a>
     </div>
